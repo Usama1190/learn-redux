@@ -69,7 +69,7 @@ console.log(bankStore.getState()); // redux function getState()
 
 
 
-
+/*
 
 import { combineReducers, createStore } from "redux";
 
@@ -124,3 +124,36 @@ bankStore.dispatch({ type: "widthDraw", payload: 40 });
 bankStore.dispatch({ type: "showBalance" });
 
 console.log(bankStore.getState()); // redux function getState()
+
+*/
+
+
+
+
+
+
+
+
+/*
+import { combineReducers, createStore } from "redux";
+
+const product = (state = [], { type, payload }) => {
+    switch (type) {
+        case 'addProducts':
+            return [...state, payload];
+        case 'deleteProduct':
+            return state.filter((item) => item.id !== payload.id)
+        case 'showProducts':
+            return state;    
+    }
+}
+
+
+const productManagement = createStore(product);
+
+productManagement.dispatch({ type: 'addProducts', payload: 'Product-1' });
+productManagement.dispatch({ type: 'deleteProduct', payload: 'Product-2' });
+productManagement.dispatch({ type: 'showProducts', payload: 'Product-3' });
+
+console.log(productManagement.getState()); // redux function getState()
+*/
