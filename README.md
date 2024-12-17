@@ -14,3 +14,6 @@ dispatch (type, payload)
 command
 1. npm init -y      (package.json)
 2. npm install redux
+
+redux function
+createStore() , combineReducer() , reducerName.getState()
